@@ -41,6 +41,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 # not sure if I need this one, but it was in the assingmnet example
 gem 'spring', group: :development
 
+# Hirb for data display in the console
+gem 'hirb'
+
 group :test, :development do 
 	gem "rspec-rails"
 end
