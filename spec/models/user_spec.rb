@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
   it "requires a last name" do 
   	user = User.new(last_name: "")
   	user.valid?
-  	expect(user.errors[:lasst_name].any?).to eq(true)
+  	expect(user.errors[:last_name].any?).to eq(true)
   end
 
   it "requires an age to be numeric" do
@@ -26,7 +26,7 @@ RSpec.describe User, type: :model do
   	[user1, user2].each { |u| u.valid? }
 
   	expect(user1.errors[:first_name].any?).to eq(false)
-  	expect(user2.erorrs[:first_name].any?).to eq(true)
+  	expect(user2.errors[:first_name].any?).to eq(true)
   end
 
   it "requires last name to be at least 2 characters" do 
